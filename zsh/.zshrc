@@ -5,6 +5,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:/usr/local/sbin
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 
+# qiniu
+export PATH=$PATH:/Users/${USER}/workspace/qshell-v2.3.6
+
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/${USER}/.oh-my-zsh
 
@@ -98,3 +101,13 @@ source ~/workspace/github.com/mrdulin/dotfiles/zsh/lib/node-project.sh
 source ~/workspace/github.com/mrdulin/dotfiles/zsh/lib/alias.sh
 source ~/workspace/github.com/mrdulin/dotfiles/zsh/lib/gcloud.sh
 # source ${base_dir}/lib/golang.sh
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/elsa/workspace/github.com/mrdulin/serverless-github-webhooks/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/elsa/workspace/github.com/mrdulin/serverless-github-webhooks/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/elsa/workspace/github.com/mrdulin/serverless-github-webhooks/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/elsa/workspace/github.com/mrdulin/serverless-github-webhooks/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/elsa/workspace/github.com/mrdulin/serverless-github-webhooks/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/elsa/workspace/github.com/mrdulin/serverless-github-webhooks/node_modules/tabtab/.completions/slss.zsh
