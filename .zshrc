@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/ldu020/.oh-my-zsh
+export ZSH=/Users/elsa/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -63,8 +63,8 @@ plugins=(
   npm
 )
 
-source $ZSH/oh-my-zsh.sh
-source <(kubectl completion zsh)
+# source $ZSH/oh-my-zsh.sh
+# source <(kubectl completion zsh)
 
 # User configuration
 
@@ -98,10 +98,3 @@ source <(kubectl completion zsh)
 # proxy list
 alias proxy='export all_proxy=socks5://127.0.0.1:1086'
 alias unproxy='unset all_proxy'
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ldu020/workspace/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/ldu020/workspace/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/ldu020/workspace/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/ldu020/workspace/google-cloud-sdk/completion.zsh.inc'; fi
-function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
