@@ -1,15 +1,12 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # OSX rabbitmq installed by brew
 export PATH=$PATH:/usr/local/sbin
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/elsa/.oh-my-zsh
-
-# Golang
-export GOPATH=$HOME/workspace/go
-export PATH=$PATH:$GOPATH/bin
+export ZSH=/Users/$(whoami)/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -75,10 +72,7 @@ plugins=(
   zsh-autosuggestions
 )
 
-source $ZSH/oh-my-zsh.sh
-
 # User configuration
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -97,40 +91,10 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+base_dir=$(dirname "$0")
+source $ZSH/oh-my-zsh.sh
 
-# proxy list
-alias proxy='export all_proxy=socks5://127.0.0.1:1086'
-alias unproxy='unset all_proxy'
-function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/ldu020/workspace/nodejs-serverless-framework/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/ldu020/workspace/nodejs-serverless-framework/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/ldu020/workspace/nodejs-serverless-framework/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/ldu020/workspace/nodejs-serverless-framework/node_modules/tabtab/.completions/sls.zshexport PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ldu020/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ldu020/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/ldu020/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ldu020/google-cloud-sdk/completion.zsh.inc'; fi
-export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
-
-function node-project {
-  git init
-  npx license $(npm get init-license) -o "$(npm get init-author-name)" > LICENSE
-  npx gitignore node
-  npx covgen "$(npm get init-author-email)"
-  npm init -y
-  git add -A
-  git commit -m "Initial commit"
-}
+source ${base_dir}/lib/node-project.sh
+source ${base_dir}/lib/alias.sh
+source ${base_dir}/lib/gcloud.sh
+# source ${base_dir}/lib/golang.sh
