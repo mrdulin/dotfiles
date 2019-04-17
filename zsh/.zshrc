@@ -1,8 +1,15 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# OSX rabbitmq installed by brew
+export PATH=$PATH:/usr/local/sbin
+
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/ldu020/.oh-my-zsh
+
+# Golang
+export GOPATH=$HOME/workspace/go
+export PATH=$PATH:$GOPATH/bin
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -49,7 +56,7 @@ ZSH_THEME="cloud"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -61,10 +68,14 @@ ZSH_THEME="cloud"
 plugins=(
   git
   npm
+  kubectl
+  docker
+  docker-compose
+  zsh-syntax-highlighting
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
-source <(kubectl completion zsh)
 
 # User configuration
 
@@ -98,10 +109,28 @@ source <(kubectl completion zsh)
 # proxy list
 alias proxy='export all_proxy=socks5://127.0.0.1:1086'
 alias unproxy='unset all_proxy'
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/ldu020/workspace/nodejs-serverless-framework/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/ldu020/workspace/nodejs-serverless-framework/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/ldu020/workspace/nodejs-serverless-framework/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/ldu020/workspace/nodejs-serverless-framework/node_modules/tabtab/.completions/sls.zshexport PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ldu020/workspace/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/ldu020/workspace/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/ldu020/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ldu020/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/ldu020/workspace/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/ldu020/workspace/google-cloud-sdk/completion.zsh.inc'; fi
-function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+if [ -f '/Users/ldu020/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ldu020/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+
+function node-project {
+  git init
+  npx license $(npm get init-license) -o "$(npm get init-author-name)" > LICENSE
+  npx gitignore node
+  npx covgen "$(npm get init-author-email)"
+  npm init -y
+  git add -A
+  git commit -m "Initial commit"
+}
