@@ -5,7 +5,7 @@
 export PATH=$PATH:/usr/local/sbin
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/ldu020/.oh-my-zsh
+export ZSH=/Users/elsa/.oh-my-zsh
 
 # Golang
 export GOPATH=$HOME/workspace/go
