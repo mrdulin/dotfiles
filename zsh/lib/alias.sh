@@ -8,5 +8,7 @@
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # proxy list
-alias proxy='export all_proxy=socks5://127.0.0.1:1086'
+# alias proxy='export all_proxy=socks5://127.0.0.1:1086'
+
+alias proxy='export http_proxy=http://127.0.0.1:1087; https_proxy=https://127.0.0.1:1087'
 alias unproxy='unset all_proxy'

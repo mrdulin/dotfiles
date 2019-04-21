@@ -91,10 +91,9 @@ plugins=(
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-base_dir=$(dirname "$0")
 source $ZSH/oh-my-zsh.sh
 
-source ${base_dir}/lib/node-project.sh
-source ${base_dir}/lib/alias.sh
-source ${base_dir}/lib/gcloud.sh
+source ~/workspace/github.com/mrdulin/dotfiles/zsh/lib/node-project.sh
+source ~/workspace/github.com/mrdulin/dotfiles/zsh/lib/alias.sh
+source ~/workspace/github.com/mrdulin/dotfiles/zsh/lib/gcloud.sh
 # source ${base_dir}/lib/golang.sh
