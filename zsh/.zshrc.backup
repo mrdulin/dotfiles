@@ -6,7 +6,7 @@ export PATH=$PATH:/usr/local/sbin
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/${USER}/.oh-my-zsh
+export ZSH=/Users/$(whoami)/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -56,7 +56,7 @@ ZSH_THEME="cloud"
 HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=~/workspace/github.com/mrdulin/dotfiles/zsh/custom
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -92,6 +92,7 @@ plugins=(
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 source $ZSH/oh-my-zsh.sh
+
 source ~/workspace/github.com/mrdulin/dotfiles/zsh/lib/node-project.sh
 source ~/workspace/github.com/mrdulin/dotfiles/zsh/lib/alias.sh
 source ~/workspace/github.com/mrdulin/dotfiles/zsh/lib/gcloud.sh
