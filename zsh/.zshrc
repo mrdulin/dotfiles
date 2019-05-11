@@ -65,11 +65,13 @@ ZSH_CUSTOM=~/workspace/github.com/mrdulin/dotfiles/zsh/custom
 plugins=(
   git
   npm
+  yarn
   kubectl
   docker
   docker-compose
   zsh-syntax-highlighting
   zsh-autosuggestions
+  web-search
 )
 
 # User configuration
