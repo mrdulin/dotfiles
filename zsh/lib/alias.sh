@@ -10,5 +10,5 @@
 # proxy list
 
 alias set_socks_proxy='export http_proxy=socks5://127.0.0.1:1086; https_proxy=socks5://127.0.0.1:1086;'
-alias set_http_proxy='export http_proxy=http://127.0.0.1:1087; https_proxy=https://127.0.0.1:1087;'
+alias set_http_proxy='export http_proxy=http://127.0.0.1:1087; https_proxy=http://127.0.0.1:1087;'
 alias unset_proxy='unset http_proxy; unset https_proxy'
