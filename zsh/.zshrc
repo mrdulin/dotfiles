@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/workspace/github.com/mrdulin/dotfiles/zsh/lib/node-project.sh
 source ~/workspace/github.com/mrdulin/dotfiles/zsh/lib/alias.sh
 source ~/workspace/github.com/mrdulin/dotfiles/zsh/lib/gcloud.sh
-# source ${base_dir}/lib/golang.sh
+source ~/workspace/github.com/mrdulin/dotfiles/zsh/lib/golang.sh
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
