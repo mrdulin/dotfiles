@@ -1,13 +1,13 @@
 # dotfiles
 
-使用:
+## Usage
 
 ```bash
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ```
 
-各种工具配置文件：
+## Tools
 
-* oh-my-zsh - .zshrc
-* ITerm2 - com.googlecode.iterm2.plist
-* vim - [vim](./vim)
+- oh-my-zsh - .zshrc
+- ITerm2 - com.googlecode.iterm2.plist
+- vim - [vim](./vim)
