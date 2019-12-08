@@ -78,6 +78,8 @@ plugins=(
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
+export SELF_SIGNED_CERT_IN_CHAIN=true
+export NODE_TLS_REJECT_UNAUTHORIZED=0
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -100,3 +102,13 @@ source $dotfiles_zsh_lib_path/golang.sh
 source $dotfiles_zsh_lib_path/serverless.sh
 source $dotfiles_zsh_lib_path/postgresql.sh
 source $dotfiles_zsh_lib_path/ssh.sh
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/ldu020/workspace/github.com/mrdulin/nodejs-serverless-framework/samples/GCP/quick-start/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/ldu020/workspace/github.com/mrdulin/nodejs-serverless-framework/samples/GCP/quick-start/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/ldu020/workspace/github.com/mrdulin/nodejs-serverless-framework/samples/GCP/quick-start/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/ldu020/workspace/github.com/mrdulin/nodejs-serverless-framework/samples/GCP/quick-start/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/ldu020/workspace/github.com/mrdulin/nodejs-serverless-framework/samples/GCP/quick-start/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/ldu020/workspace/github.com/mrdulin/nodejs-serverless-framework/samples/GCP/quick-start/node_modules/tabtab/.completions/slss.zsh
