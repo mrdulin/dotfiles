@@ -91,6 +91,7 @@ export NODE_TLS_REJECT_UNAUTHORIZED=0
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+eval $(thefuck --alias)
 
 dotfiles_path=workspace/github.com/mrdulin/dotfiles
 dotfiles_zsh_lib_path=$HOME/$dotfiles_path/zsh/lib
@@ -102,6 +103,7 @@ source $dotfiles_zsh_lib_path/golang.sh
 source $dotfiles_zsh_lib_path/serverless.sh
 source $dotfiles_zsh_lib_path/postgresql.sh
 source $dotfiles_zsh_lib_path/ssh.sh
+source $dotfiles_zsh_lib_path/python_conf.sh
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
