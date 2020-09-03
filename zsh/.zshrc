@@ -80,6 +80,10 @@ plugins=(
 export LANG=en_US.UTF-8
 export SELF_SIGNED_CERT_IN_CHAIN=true
 export NODE_TLS_REJECT_UNAUTHORIZED=0
+export NPM_EMAIL=nv.jenkins@us.pwc.com
+# export NPM_EMAIL=lin.l.du@pwc.com
+export NPM_TOKEN=bnYuamVua2luc0B1cy5wd2MuY29tOkFLQ3A1YVRiZnJvdFVuUlJlSEFpaGRTMnJyZEZYYVJnc0dhb1ZVZEtCYXI5MUhTR002V1F3YUFyc1JiOU43WXJpMkpqcWFqRHU
+# export NPM_TOKEN=123X
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -104,6 +108,7 @@ source $dotfiles_zsh_lib_path/serverless.sh
 source $dotfiles_zsh_lib_path/postgresql.sh
 source $dotfiles_zsh_lib_path/ssh.sh
 source $dotfiles_zsh_lib_path/python_conf.sh
+source $dotfiles_zsh_lib_path/protobuf.sh
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
@@ -114,3 +119,5 @@ source $dotfiles_zsh_lib_path/python_conf.sh
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /Users/ldu020/workspace/github.com/mrdulin/nodejs-serverless-framework/samples/GCP/quick-start/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/ldu020/workspace/github.com/mrdulin/nodejs-serverless-framework/samples/GCP/quick-start/node_modules/tabtab/.completions/slss.zsh
+# added by travis gem
+[ -f /Users/ldu020/.travis/travis.sh ] && source /Users/ldu020/.travis/travis.sh

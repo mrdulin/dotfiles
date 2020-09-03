@@ -1,0 +1,1 @@
+export PATH=$PATH:$HOME/workspace/protoc-3.13.0-osx-x86_64/bin
