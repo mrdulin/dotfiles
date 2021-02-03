@@ -9,7 +9,7 @@ git clone this repo into below location
 ```
 
 ```bash
-ln -s dotfiles/.zshrc ~/.zshrc
+cp dotfiles/.zshrc ~/.zshrc
 ```
 
 ```bash
