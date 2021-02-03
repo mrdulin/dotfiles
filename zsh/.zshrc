@@ -78,11 +78,11 @@ plugins=(
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
-export SELF_SIGNED_CERT_IN_CHAIN=true
-export NODE_TLS_REJECT_UNAUTHORIZED=0
-export NPM_EMAIL=nv.jenkins@us.pwc.com
+# export SELF_SIGNED_CERT_IN_CHAIN=true
+# export NODE_TLS_REJECT_UNAUTHORIZED=0
+# export NPM_EMAIL=nv.jenkins@us.pwc.com
 # export NPM_EMAIL=lin.l.du@pwc.com
-export NPM_TOKEN=bnYuamVua2luc0B1cy5wd2MuY29tOkFLQ3A1YVRiZnJvdFVuUlJlSEFpaGRTMnJyZEZYYVJnc0dhb1ZVZEtCYXI5MUhTR002V1F3YUFyc1JiOU43WXJpMkpqcWFqRHU
+# export NPM_TOKEN=bnYuamVua2luc0B1cy5wd2MuY29tOkFLQ3A1YVRiZnJvdFVuUlJlSEFpaGRTMnJyZEZYYVJnc0dhb1ZVZEtCYXI5MUhTR002V1F3YUFyc1JiOU43WXJpMkpqcWFqRHU
 # export NPM_TOKEN=123X
 
 # Preferred editor for local and remote sessions
@@ -95,7 +95,7 @@ export NPM_TOKEN=bnYuamVua2luc0B1cy5wd2MuY29tOkFLQ3A1YVRiZnJvdFVuUlJlSEFpaGRTMnJ
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-eval $(thefuck --alias)
+# eval $(thefuck --alias)
 
 dotfiles_path=workspace/github.com/mrdulin/dotfiles
 dotfiles_zsh_lib_path=$HOME/$dotfiles_path/zsh/lib
