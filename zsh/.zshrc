@@ -109,6 +109,7 @@ source $dotfiles_zsh_lib_path/postgresql.sh
 source $dotfiles_zsh_lib_path/ssh.sh
 source $dotfiles_zsh_lib_path/python_conf.sh
 source $dotfiles_zsh_lib_path/protobuf.sh
+source $dotfiles_zsh_lib_path/python.sh
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
