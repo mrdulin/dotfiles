@@ -1,1 +1,1 @@
-export PATH=$PATH:$HOME/Library/Python/3.8/bin
+export PATH=$PATH:$HOME/Library/Python/3.8/bin:/usr/local/opt/python/libexec/bin
