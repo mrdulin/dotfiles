@@ -111,14 +111,4 @@ source $dotfiles_zsh_lib_path/python_conf.sh
 source $dotfiles_zsh_lib_path/protobuf.sh
 source $dotfiles_zsh_lib_path/python.sh
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/ldu020/workspace/github.com/mrdulin/nodejs-serverless-framework/samples/GCP/quick-start/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/ldu020/workspace/github.com/mrdulin/nodejs-serverless-framework/samples/GCP/quick-start/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/ldu020/workspace/github.com/mrdulin/nodejs-serverless-framework/samples/GCP/quick-start/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/ldu020/workspace/github.com/mrdulin/nodejs-serverless-framework/samples/GCP/quick-start/node_modules/tabtab/.completions/sls.zsh
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /Users/ldu020/workspace/github.com/mrdulin/nodejs-serverless-framework/samples/GCP/quick-start/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/ldu020/workspace/github.com/mrdulin/nodejs-serverless-framework/samples/GCP/quick-start/node_modules/tabtab/.completions/slss.zsh
-# added by travis gem
-[ -f /Users/ldu020/.travis/travis.sh ] && source /Users/ldu020/.travis/travis.sh
+
